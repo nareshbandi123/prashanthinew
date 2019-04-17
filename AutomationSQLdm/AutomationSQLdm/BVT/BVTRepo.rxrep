@@ -519,6 +519,20 @@ AAAASUVORK5CYII=
 			searchtimeout="30000ms">
 				//form[@title~'^Idera\ SQL\ diagnostic\ mana']//list[@automationid='toolsMenu']/picture[@automationid='HeaderPresenter']/text[@caption='Tools']
 			</item>
+			<item
+			capname="text"
+			id="188cd2d4-3fae-400d-aa5c-1def0e789ebc"
+			name="txtSUMBlockedSessions"
+			searchtimeout="30000ms">
+				//form[@title~'^Idera\ SQL\ diagnostic\ mana']/statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='blockedSessionsPanel']/toolbar[@controlname='blockedSessionsHeaderStrip']/text[@accessiblename='Blocked Sessions']
+			</item>
+			<item
+			capname="menuitem"
+			id="6209cf2b-f70d-42fe-b313-f4d92666c7d6"
+			name="txtSUMLockStatistics"
+			searchtimeout="30000ms">
+				//form[@title~'^Idera\ SQL\ diagnostic\ mana']//statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']//container[@controlname='lockStatisticsPanel']/toolbar[@controlname='lockStatisticsHeaderStrip']/menuitem[@accessiblename='Lock Statistics: Requests']
+			</item>
 			<basepath>
 				//form[@title~'^Idera\ SQL\ diagnostic\ mana']
 			</basepath>
@@ -676,6 +690,48 @@ DAPIxVgFicf/GQCdrAkiuOdOjQAAAABJRU5ErkJggg==
 					/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']/container[@controlname='propertiesControl']//container[@controlname='osPropertyPage']
 				</basepath>
 			</folder>
+			<item
+			capname="radiobutton"
+			id="844b935e-0036-415d-ac59-3cb462f3e281"
+			name="rdbsqlauthentication"
+			searchtimeout="30000ms">
+				/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='popularPropertyPage']/?/?/container[@controlname='tableLayoutPanel6']/radiobutton[@controlname='useSqlServerAuthenticationRadioButton']
+			</item>
+			<item
+			capname="text"
+			id="e5d3dda6-9a53-4a14-b1e1-2cf5d52af411"
+			name="txtsqlloginname"
+			searchtimeout="30000ms">
+				/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='popularPropertyPage']/?/?/container[@controlname='tableLayoutPanel6']/?/?/text[@accessiblename='Login name:']
+			</item>
+			<item
+			capname="text"
+			id="78744f6d-31b5-4745-bf3b-a930841a1470"
+			name="txtsqlpwd"
+			searchtimeout="30000ms">
+				/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='popularPropertyPage']/?/?/container[@controlname='tableLayoutPanel6']/?/?/text[@accessiblename='Password:']
+			</item>
+			<item
+			capname="button"
+			id="aa481bd6-989d-46ca-a0d1-1361fd20000e"
+			name="btnTest"
+			searchtimeout="30000ms">
+				/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//container[@controlname='propertiesControl']//container[@controlname='popularPropertyPage']/?/?/container[@controlname='tableLayoutPanel6']/button[@controlname='testConnectionCredentialsButton']
+			</item>
+			<item
+			capname="button"
+			id="e2eb19d4-b732-4d04-9ff3-82983f42f618"
+			name="btnOk"
+			searchtimeout="30000ms">
+				/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//button[@controlname='okButton']
+			</item>
+			<item
+			capname="button"
+			id="6dfbb509-8f40-4ec0-a42b-f2684b3624ad"
+			name="btnClose"
+			searchtimeout="30000ms">
+				/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']//button[@accessiblename='Close']
+			</item>
 			<basepath>
 				/form[@controlname='MonitoredSqlServerInstancePropertiesDialog']
 			</basepath>

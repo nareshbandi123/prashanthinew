@@ -147,6 +147,18 @@
     <Compile Include="BVT\Steps.cs">
       <id>4f4d7609-24f4-4588-9914-7943fa6ff22b</id>
     </Compile>
+    <Compile Include="BVT\TC_722021\VerifyquerydatacollectionInQueriesSignatureMode.cs">
+      <id>1b7520d9-bfca-44fb-8f11-878b0b75d2d0</id>
+    </Compile>
+    <Compile Include="BVT\TC_722022\Verifyquerydatacollectionhappensononaninstanceconnectedwithuserwithoutsysadminpermission.cs">
+      <id>967cac6e-d7fe-405b-8e7c-ff1b61204d7b</id>
+    </Compile>
+    <Compile Include="BVT\TC_722023\Verifyquerydatacollectionhappensononaninstanceconnectedwithuserwithoutsysadminpermission.cs">
+      <id>b9a19e4f-b7da-4e34-9454-272fc0a4c5b3</id>
+    </Compile>
+    <Compile Include="BVT\TC_722044\Verifydatacollectionhappensonallwidgetsonaninstanceconnectedwithuserwithoutsysadminpermission.cs">
+      <id>7864d625-ece2-42f2-b760-a9ce6980c5c6</id>
+    </Compile>
     <Compile Include="BVT\TC_722114\BVTVerifyanactionprovidercanbeRemovedSuccessfully.cs">
       <id>f346a739-3d88-4d88-905e-9952ec0b552a</id>
     </Compile>
@@ -322,7 +334,7 @@
       <BoundTo>a07b7db7-b455-407d-a809-ce4bee7f94d2</BoundTo>
       <DependentUpon>Recording1.rxrec</DependentUpon>
       <RecorderCode>true</RecorderCode>
-      <id>00cca2e0-d507-4cea-a3c3-9d540e181543</id>
+      <id>91a93bb6-9d18-4eb8-867d-831b2ccdd020</id>
     </Compile>
     <Compile Include="OperatorSecurityRole\TC_T721974\Recording1.UserCode.cs">
       <DependentUpon>Recording1.rxrec</DependentUpon>
@@ -459,6 +471,18 @@
     </Folder>
     <Folder Include="Base">
       <id>ef5cd861-297c-44b3-a2dd-d36529c4ce01</id>
+    </Folder>
+    <Folder Include="BVT\TC_722044">
+      <id>03a3a90f-be0a-495c-8748-c970abe8dc1e</id>
+    </Folder>
+    <Folder Include="BVT\TC_722023">
+      <id>7cd8b8d5-1205-473e-88fb-541850afe89f</id>
+    </Folder>
+    <Folder Include="BVT\TC_722022">
+      <id>3722eb35-4936-4399-99a8-3b5ff2236e73</id>
+    </Folder>
+    <Folder Include="BVT\TC_722021">
+      <id>7ca6547d-3544-4a61-88fa-409140f28420</id>
     </Folder>
     <Folder Include="BVT\TC_722118">
       <id>2408841a-b671-4db5-b893-48f9751279c4</id>

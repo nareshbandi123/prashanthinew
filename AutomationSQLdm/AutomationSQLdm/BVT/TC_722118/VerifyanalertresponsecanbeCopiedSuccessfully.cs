@@ -40,7 +40,12 @@ namespace AutomationSQLdm.BVT.TC_722118
         		Steps.ClickOnTools();
         		Steps.SelectAlertActionsandResponsesOption();
         		Steps.CopyAlertResponses();
+        		Steps.ClickOnTools();
+        		Steps.SelectAlertActionsandResponsesOption();
         		Steps.RemoveAlertResponses();
+        		Steps.ClickOnTools();
+        		Steps.SelectAlertActionsandResponsesOption();
+        		Steps.RemoveCopiedAlertResponses();
         		Steps.ClickOnTools();
         		Steps.SelectAlertActionsandResponsesOption();
         		Steps.ClickonActionProvidersOption();

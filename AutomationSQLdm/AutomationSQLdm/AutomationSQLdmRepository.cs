@@ -33,6 +33,7 @@ namespace AutomationSQLdm
         AutomationSQLdmRepositoryFolders.SQLdmDesktopClientAppFolder _sqldmdesktopclient;
         AutomationSQLdmRepositoryFolders.IderaSQLDiagnosticManagerSQLdmRepoAppFolder _iderasqldiagnosticmanagersqldmrepo;
         AutomationSQLdmRepositoryFolders.ExceptionMessageBoxFormAppFolder _exceptionmessageboxform;
+        AutomationSQLdmRepositoryFolders.Explorer1AppFolder _explorer1;
 
         /// <summary>
         /// Gets the singleton class instance representing the AutomationSQLdmRepository element repository.
@@ -55,6 +56,7 @@ namespace AutomationSQLdm
             _sqldmdesktopclient = new AutomationSQLdmRepositoryFolders.SQLdmDesktopClientAppFolder(this);
             _iderasqldiagnosticmanagersqldmrepo = new AutomationSQLdmRepositoryFolders.IderaSQLDiagnosticManagerSQLdmRepoAppFolder(this);
             _exceptionmessageboxform = new AutomationSQLdmRepositoryFolders.ExceptionMessageBoxFormAppFolder(this);
+            _explorer1 = new AutomationSQLdmRepositoryFolders.Explorer1AppFolder(this);
         }
 
 #region Variables
@@ -125,6 +127,15 @@ namespace AutomationSQLdm
         public virtual AutomationSQLdmRepositoryFolders.ExceptionMessageBoxFormAppFolder ExceptionMessageBoxForm
         {
             get { return _exceptionmessageboxform; }
+        }
+
+        /// <summary>
+        /// The Explorer1 folder.
+        /// </summary>
+        [RepositoryFolder("266f1a9c-182c-4bd9-98a0-c23f5d1cc46e")]
+        public virtual AutomationSQLdmRepositoryFolders.Explorer1AppFolder Explorer1
+        {
+            get { return _explorer1; }
         }
     }
 
@@ -637,6 +648,8 @@ namespace AutomationSQLdm
         [RepositoryFolder("02e2bddb-96ad-4da9-bf49-406cf03d0b37")]
         public partial class IderaSQLDiagnosticManagerSQLdmRepoAppFolder : RepoGenBaseFolder
         {
+            AutomationSQLdmRepositoryFolders.RibbonFolder _ribbon;
+            AutomationSQLdmRepositoryFolders.WindowsFormsHostControlFolder _windowsformshostcontrol;
             RepoItemInfo _twitterInfo;
 
             /// <summary>
@@ -645,6 +658,8 @@ namespace AutomationSQLdm
             public IderaSQLDiagnosticManagerSQLdmRepoAppFolder(RepoGenBaseFolder parentFolder) :
                     base("IderaSQLDiagnosticManagerSQLdmRepo", "/form[@title~'^Idera\\ SQL\\ diagnostic\\ mana']", parentFolder, 30000, null, true, "02e2bddb-96ad-4da9-bf49-406cf03d0b37", "")
             {
+                _ribbon = new AutomationSQLdmRepositoryFolders.RibbonFolder(this);
+                _windowsformshostcontrol = new AutomationSQLdmRepositoryFolders.WindowsFormsHostControlFolder(this);
                 _twitterInfo = new RepoItemInfo(this, "Twitter", "statusbar[@automationid='statusBar']/?/?/container[@automationid='viewContainer']/container[@automationid='windowsFormsHostControl']/?/?/container[@controlname='_child']//container[@controlname='panel8']/link[@controlname='_twitterLinkLabel']/?/?/link[@accessiblename='Twitter']", 30000, null, "56ecba9a-d8b1-416b-93d7-dbb379964d32");
             }
 
@@ -693,6 +708,321 @@ namespace AutomationSQLdm
                 get
                 {
                     return _twitterInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Ribbon folder.
+            /// </summary>
+            [RepositoryFolder("23937c55-cf61-4d35-87ba-7452375cc43a")]
+            public virtual AutomationSQLdmRepositoryFolders.RibbonFolder Ribbon
+            {
+                get { return _ribbon; }
+            }
+
+            /// <summary>
+            /// The WindowsFormsHostControl folder.
+            /// </summary>
+            [RepositoryFolder("7506e2c5-633a-47d4-bf78-13679215c656")]
+            public virtual AutomationSQLdmRepositoryFolders.WindowsFormsHostControlFolder WindowsFormsHostControl
+            {
+                get { return _windowsformshostcontrol; }
+            }
+        }
+
+        /// <summary>
+        /// The RibbonFolder folder.
+        /// </summary>
+        [RepositoryFolder("23937c55-cf61-4d35-87ba-7452375cc43a")]
+        public partial class RibbonFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _detailsInfo;
+            RepoItemInfo _scrollviewerInfo;
+            RepoItemInfo _xamtabcontrolInfo;
+            RepoItemInfo _overviewInfo;
+
+            /// <summary>
+            /// Creates a new Ribbon  folder.
+            /// </summary>
+            public RibbonFolder(RepoGenBaseFolder parentFolder) :
+                    base("Ribbon", ".//toolbar[@automationid='ribbon']", parentFolder, 30000, null, false, "23937c55-cf61-4d35-87ba-7452375cc43a", "")
+            {
+                _detailsInfo = new RepoItemInfo(this, "Details", "?/?/tabpage[@automationid='Sessions']/?/?/toolbar[@automationid='sessionsTabViewsGroup']/radiobutton[@name='Details']", 30000, null, "ba7be880-3f77-4540-90dd-491728fb2fef");
+                _scrollviewerInfo = new RepoItemInfo(this, "ScrollViewer", "?/?/tabpage[@automationid='Sessions']/container[@classname='ScrollViewer']", 30000, null, "e840a7e3-750d-48f4-9339-4d224fb1a977");
+                _xamtabcontrolInfo = new RepoItemInfo(this, "XamTabControl", "tabpagelist[@classname='XamTabControl']", 30000, null, "44a94e09-4414-4525-82de-e35dd55b7236");
+                _overviewInfo = new RepoItemInfo(this, "Overview", "?/?/tabpage[@automationid='Overview']", 30000, null, "c0103620-2e1c-4e28-a518-634368dc2ad2");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("23937c55-cf61-4d35-87ba-7452375cc43a")]
+            public virtual Ranorex.ToolBar Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.ToolBar>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("23937c55-cf61-4d35-87ba-7452375cc43a")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Details item.
+            /// </summary>
+            [RepositoryItem("ba7be880-3f77-4540-90dd-491728fb2fef")]
+            public virtual Ranorex.RadioButton Details
+            {
+                get
+                {
+                    return _detailsInfo.CreateAdapter<Ranorex.RadioButton>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Details item info.
+            /// </summary>
+            [RepositoryItemInfo("ba7be880-3f77-4540-90dd-491728fb2fef")]
+            public virtual RepoItemInfo DetailsInfo
+            {
+                get
+                {
+                    return _detailsInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ScrollViewer item.
+            /// </summary>
+            [RepositoryItem("e840a7e3-750d-48f4-9339-4d224fb1a977")]
+            public virtual Ranorex.Container ScrollViewer
+            {
+                get
+                {
+                    return _scrollviewerInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ScrollViewer item info.
+            /// </summary>
+            [RepositoryItemInfo("e840a7e3-750d-48f4-9339-4d224fb1a977")]
+            public virtual RepoItemInfo ScrollViewerInfo
+            {
+                get
+                {
+                    return _scrollviewerInfo;
+                }
+            }
+
+            /// <summary>
+            /// The XamTabControl item.
+            /// </summary>
+            [RepositoryItem("44a94e09-4414-4525-82de-e35dd55b7236")]
+            public virtual Ranorex.TabPageList XamTabControl
+            {
+                get
+                {
+                    return _xamtabcontrolInfo.CreateAdapter<Ranorex.TabPageList>(true);
+                }
+            }
+
+            /// <summary>
+            /// The XamTabControl item info.
+            /// </summary>
+            [RepositoryItemInfo("44a94e09-4414-4525-82de-e35dd55b7236")]
+            public virtual RepoItemInfo XamTabControlInfo
+            {
+                get
+                {
+                    return _xamtabcontrolInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Overview item.
+            /// </summary>
+            [RepositoryItem("c0103620-2e1c-4e28-a518-634368dc2ad2")]
+            public virtual Ranorex.TabPage Overview
+            {
+                get
+                {
+                    return _overviewInfo.CreateAdapter<Ranorex.TabPage>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Overview item info.
+            /// </summary>
+            [RepositoryItemInfo("c0103620-2e1c-4e28-a518-634368dc2ad2")]
+            public virtual RepoItemInfo OverviewInfo
+            {
+                get
+                {
+                    return _overviewInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The WindowsFormsHostControlFolder folder.
+        /// </summary>
+        [RepositoryFolder("7506e2c5-633a-47d4-bf78-13679215c656")]
+        public partial class WindowsFormsHostControlFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _sessionschartInfo;
+            ElementBrInfoClass _elementbrInfo;
+            RepoItemInfo _elementbr1Info;
+
+            /// <summary>
+            /// Creates a new WindowsFormsHostControl  folder.
+            /// </summary>
+            public WindowsFormsHostControlFolder(RepoGenBaseFolder parentFolder) :
+                    base("WindowsFormsHostControl", "element[@automationid='viewContainer']/?/?/element[@automationid='viewHost']/container[@automationid='windowsFormsHostControl']", parentFolder, 30000, null, false, "7506e2c5-633a-47d4-bf78-13679215c656", "")
+            {
+                _sessionschartInfo = new RepoItemInfo(this, "SessionsChart", "?/?/container[@controlname='SessionsSummaryView']//container[@controlname='sessionsPanel']/?/?/element[@controlname='sessionsChart']", 30000, null, "bfabbe72-3f00-468a-81a8-e95b7d36e28e");
+                _elementbrInfo = new ElementBrInfoClass(this);
+                _elementbr1Info = new RepoItemInfo(this, "ElementBr1", "container[@controlname='_child']/container[@controlname='SessionsSummaryView']//container[@controlname='sessionsPanel']//element[@controlname='br']", 30000, null, "5464f93a-8cd7-4383-8075-2441a27e9216");
+            }
+
+            /// <summary>
+            /// The ElementBrInfoClass folder.
+            /// </summary>
+            [RepositoryItemInfo("a939a3e5-c745-4cc2-9374-cc71eb41a682")]
+            public class ElementBrInfoClass : RepoItemInfo
+            {
+                /// <summary>
+                /// ElementBrInfoClass class constructor.
+                /// </summary>
+                public ElementBrInfoClass(RepoGenBaseFolder parentFolder)
+                    : base(parentFolder, "ElementBr", "container[@controlname='_child']/container[@controlname='SessionsSummaryView']//container[@controlname='responseTimePanel']//element[@controlname='br']", 30000, null, "a939a3e5-c745-4cc2-9374-cc71eb41a682")
+                { }
+
+                /// <summary>
+                /// Gets the Responsetime item image.
+                /// </summary>
+                /// <returns>The Responsetime image.</returns>
+                [RepositoryImage("6aa1f0d3-1b39-4d4d-80e2-be1e7bd6e256")]
+                public CompressedImage GetResponsetime()
+                {
+                    return GetImage("6aa1f0d3-1b39-4d4d-80e2-be1e7bd6e256");
+                }
+
+                /// <summary>
+                /// Gets the Responsetime item image.
+                /// </summary>
+                /// <param name="cropRect">The bounds of the sub-image to return.</param>
+                /// <returns>The cropped image.</returns>
+                [RepositoryImage("6aa1f0d3-1b39-4d4d-80e2-be1e7bd6e256")]
+                public CompressedImage GetResponsetime(System.Drawing.Rectangle cropRect)
+                {
+                    return GetImage("6aa1f0d3-1b39-4d4d-80e2-be1e7bd6e256", cropRect);
+                }
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("7506e2c5-633a-47d4-bf78-13679215c656")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("7506e2c5-633a-47d4-bf78-13679215c656")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SessionsChart item.
+            /// </summary>
+            [RepositoryItem("bfabbe72-3f00-468a-81a8-e95b7d36e28e")]
+            public virtual Ranorex.Unknown SessionsChart
+            {
+                get
+                {
+                    return _sessionschartInfo.CreateAdapter<Ranorex.Unknown>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SessionsChart item info.
+            /// </summary>
+            [RepositoryItemInfo("bfabbe72-3f00-468a-81a8-e95b7d36e28e")]
+            public virtual RepoItemInfo SessionsChartInfo
+            {
+                get
+                {
+                    return _sessionschartInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ElementBr item.
+            /// </summary>
+            [RepositoryItem("a939a3e5-c745-4cc2-9374-cc71eb41a682")]
+            public virtual Ranorex.Unknown ElementBr
+            {
+                get
+                {
+                    return _elementbrInfo.CreateAdapter<Ranorex.Unknown>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ElementBr item info.
+            /// </summary>
+            [RepositoryItemInfo("a939a3e5-c745-4cc2-9374-cc71eb41a682")]
+            public virtual ElementBrInfoClass ElementBrInfo
+            {
+                get
+                {
+                    return _elementbrInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ElementBr1 item.
+            /// </summary>
+            [RepositoryItem("5464f93a-8cd7-4383-8075-2441a27e9216")]
+            public virtual Ranorex.Unknown ElementBr1
+            {
+                get
+                {
+                    return _elementbr1Info.CreateAdapter<Ranorex.Unknown>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ElementBr1 item info.
+            /// </summary>
+            [RepositoryItemInfo("5464f93a-8cd7-4383-8075-2441a27e9216")]
+            public virtual RepoItemInfo ElementBr1Info
+            {
+                get
+                {
+                    return _elementbr1Info;
                 }
             }
         }
@@ -759,6 +1089,72 @@ namespace AutomationSQLdm
                 get
                 {
                     return _button1Info;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The Explorer1AppFolder folder.
+        /// </summary>
+        [RepositoryFolder("266f1a9c-182c-4bd9-98a0-c23f5d1cc46e")]
+        public partial class Explorer1AppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _list1Info;
+
+            /// <summary>
+            /// Creates a new Explorer1  folder.
+            /// </summary>
+            public Explorer1AppFolder(RepoGenBaseFolder parentFolder) :
+                    base("Explorer1", "/desktop[@processname='explorer']", parentFolder, 30000, null, true, "266f1a9c-182c-4bd9-98a0-c23f5d1cc46e", "")
+            {
+                _list1Info = new RepoItemInfo(this, "List1", "?/?/list[@controlid='1']", 30000, null, "f8f9e9d8-78cd-42b5-bb61-1010ed312d3b");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("266f1a9c-182c-4bd9-98a0-c23f5d1cc46e")]
+            public virtual Ranorex.Desktop Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Desktop>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("266f1a9c-182c-4bd9-98a0-c23f5d1cc46e")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The List1 item.
+            /// </summary>
+            [RepositoryItem("f8f9e9d8-78cd-42b5-bb61-1010ed312d3b")]
+            public virtual Ranorex.List List1
+            {
+                get
+                {
+                    return _list1Info.CreateAdapter<Ranorex.List>(true);
+                }
+            }
+
+            /// <summary>
+            /// The List1 item info.
+            /// </summary>
+            [RepositoryItemInfo("f8f9e9d8-78cd-42b5-bb61-1010ed312d3b")]
+            public virtual RepoItemInfo List1Info
+            {
+                get
+                {
+                    return _list1Info;
                 }
             }
         }

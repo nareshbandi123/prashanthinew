@@ -7,10 +7,14 @@
       <string>60513a05-eab7-41e7-8c10-e51c735edc2e</string>
       <string>4a6de247-0fc0-4c5f-91de-4426bcec9862</string>
       <string>435ace51-31ae-4bef-bf4d-5d490d806462</string>
+      <string>7ca6547d-3544-4a61-88fa-409140f28420</string>
+      <string>3722eb35-4936-4399-99a8-3b5ff2236e73</string>
+      <string>7cd8b8d5-1205-473e-88fb-541850afe89f</string>
       <string>f67a0850-f8a8-4e52-a094-32daff42672d</string>
       <string>ddc790db-07bd-47ea-be35-10b1675c22a2</string>
       <string>afd7b614-8c45-4df7-93b8-e43d95bf67bd</string>
       <string>2194f7a0-ea44-4857-b3cb-1b12286ddc97</string>
+      <string>2408841a-b671-4db5-b893-48f9751279c4</string>
       <string>afbad38a-0c79-42dc-9dcd-892aed0a482b</string>
       <string>7d0248ef-d8dd-428c-9945-2aafeeb8fcb1</string>
       <string>507e1fe9-b3aa-4282-8307-c5e66a10f8d3</string>
@@ -32,6 +36,6 @@
       <string>1baf21b8-f274-4f5b-94e6-4ce926db2662</string>
     </ArrayOfString>
   </SerializedValue>
-  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[BVT[TC_722114[]TC_722115[]TC_722117[]TC_722118[]TC_722119[]TC_722120[]]TestData[]AutomationSQLdmRepository.rxrep[]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\BVT\Steps.cs&#xD;&#xA;Solution AutomationSQLdm" />
+  <ProjectBrowserState value="[Solution AutomationSQLdm[AutomationSQLdm[BVT[TC_722023[]TC_722044[]]TestData[]AutomationSQLdmRepository.rxrep[]]]]&#xD;&#xA;Solution AutomationSQLdm\AutomationSQLdm\BVT\BVTRepo.rxrep&#xD;&#xA;Solution AutomationSQLdm" />
   <StartupProject value="{61F99090-53F7-41D0-9F8A-6FC8C2262E52}" />
 </Properties>
