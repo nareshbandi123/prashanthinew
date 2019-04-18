@@ -1413,7 +1413,7 @@ namespace AutomationSQLdm.BVT
 						}
 				     
 						repo.MonitoredSqlServerInstancePropertiesDial.btnClose.Click();
-				     	Thread.Sleep(360000);
+				     	Thread.Sleep(3600);
 				    } 
 					catch (Exception ex)
 					{
